@@ -1,0 +1,5 @@
+
+offer-id;product-sku;min-shipping-price;min-shipping-price-additional;min-shipping-zone;min-shipping-type;price;total-price;price-additional-info;quantity;description;state-code;shop-id;shop-name;professional;premium;logistic-class;active;favorite-rank;channels;deleted;origin-price;discount-start-date;discount-end-date;available-start-date;available-end-date;discount-price;currency-iso-code;discount-ranges;leadtime-to-ship;allow-quote-requests;price-ranges;fulfillment-center-code;measurement-units
+"2000";"FC270EM4P5";"3.00";"0.50";"us";"economy";"1399.00";"1402.00";"";"1";"";"1";"2000";"Test Seller #1";"true";"false";"s";"true";"";"INIT";"false";"1399.00";"";"";"";"";"";"USD";"";"";"false";"1|1399.00";"DEFAULT";""
+"2001";"lightningcrocs";"3.00";"0.50";"us";"economy";"100.00";"103.00";"";"1";"";"1";"2000";"Test Seller #1";"true";"false";"s";"true";"";"INIT";"false";"100.00";"";"";"";"";"";"USD";"";"";"false";"1|100.00";"DEFAULT";""
+"2002";"firecrocs";"3.00";"0.50";"us";"economy";"100.00";"103.00";"";"1";"";"1";"2000";"Test Seller #1";"true";"false";"s";"true";"";"INIT";"false";"100.00";"";"";"";"";"";"USD";"";"";"false";"1|100.00";"DEFAULT";""
