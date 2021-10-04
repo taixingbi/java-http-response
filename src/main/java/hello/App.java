@@ -1,13 +1,17 @@
 package hello;
 
-
-import java.net.http.HttpResponse;
+import hello.http.HttpApache;
+import hello.http.HttpWebClient;
 
 public class App {
     public static void main(String[] args) throws Exception
     {
         System.out.println("----------------app------------------");
-        HttpResponseService.getSync();
+//        HttpClientRequest.getSync();
+
+//        HttpWebClient.get();
+        HttpApache.get();
+
         System.out.println("----------------app end------------------");
     }
 
