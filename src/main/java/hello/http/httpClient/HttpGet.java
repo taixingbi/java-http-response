@@ -1,10 +1,9 @@
-package hello.http;
+package hello.http.httpClient;
 
 import java.net.URI;
-import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 
-public class HttpClientRequest {
+public class HttpGet {
     static String uri= "https://httpbin.org/get";
 
     public static void getSync() throws Exception {
