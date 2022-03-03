@@ -7,7 +7,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 public class HttpPut {
-    static String uri= "https://httpbin.org/get";
+    static String uri= "https://httpbin.org/put";
 
     public static void process() throws Exception {
         String data = "{\n  \"Id\": 12345,\n  \"Customer\": \"John Smith\",\n  \"Quantity\": 1,\n  \"Price\": 10.00\n}";
