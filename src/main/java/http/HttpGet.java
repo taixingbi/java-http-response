@@ -1,5 +1,10 @@
+package http;
+
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpRequest;
+import java.net.http.HttpClient;
+import java.net.http.HttpResponse;
 
 public class HttpGet {
     static String uri= "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
@@ -10,24 +15,33 @@ public class HttpGet {
         System.out.println("----------------http get------------------");
     }
 
-    public static void getSync() throws Exception {
+    public static void getSync(){
         System.out.println("getSync");
-        java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
+
+        HttpClient client = java.net.http.HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(uri))
 //                .header(     "Accept", "application/csv")
 //                .header(     "Authorization", authorization)
+                .GET()
                 .build();
 
-        java.net.http.HttpResponse<String> response =
-                client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = null;
+
+        try {
+            response = client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString());
+        } catch (IOException e) {
+            System.out.println(e);
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
 
         String body= response.body();
         System.out.println("body: \n" + body);
     }
 
     public static void getAsync() {
-        java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
+        HttpClient client = java.net.http.HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
 //                .header(     "Accept", "application/csv")
 //                .header(     "Authorization", authorization)
