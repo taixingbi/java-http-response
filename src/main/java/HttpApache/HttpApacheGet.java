@@ -1,4 +1,4 @@
-package hello.http;
+package HttpApache;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -11,10 +11,16 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
-public class HttpApache {
+public class HttpApacheGet {
     static String uri= "https://httpbin.org/get";
 
     static CloseableHttpClient httpclient = HttpClients.createDefault();
+
+    public static void main(String[] args) throws Exception {
+        System.out.println("----------------Http Apache Get start ------------------");
+        get();
+        System.out.println("----------------Http Apache Get end------------------");
+    }
 
     public static void get() throws Exception {
         HttpGet httpget = new HttpGet(uri);// get method

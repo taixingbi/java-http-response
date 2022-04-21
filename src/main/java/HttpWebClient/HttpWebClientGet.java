@@ -1,14 +1,19 @@
-package hello.http;
+package HttpWebClient;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.time.Duration;
-import java.util.function.Consumer;
 
-public class HttpWebClient {
+public class HttpWebClientGet {
     static String uri= "https://httpbin.org/get";
+
+    public static void main(String[] args) throws Exception {
+        System.out.println("----------------http get------------------");
+        get();
+        System.out.println("----------------http get------------------");
+    }
 
     public static void get() {
         WebClient webClient = WebClient.builder()
