@@ -1,12 +1,17 @@
-package hello.http.httpClient;
-
 import java.net.URI;
 import java.net.http.HttpRequest;
 
 public class HttpGet {
-    static String uri= "https://httpbin.org/get";
+    static String uri= "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+
+    public static void main(String[] args) throws Exception {
+        System.out.println("----------------http get------------------");
+        getSync();
+        System.out.println("----------------http get------------------");
+    }
 
     public static void getSync() throws Exception {
+        System.out.println("getSync");
         java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(uri))
@@ -17,11 +22,11 @@ public class HttpGet {
         java.net.http.HttpResponse<String> response =
                 client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString());
 
-        String result= response.body();
-        System.out.println("HttpResponseService getSync: " + result);
+        String body= response.body();
+        System.out.println("body: \n" + body);
     }
 
-    public static void getAsync(String uri) {
+    public static void getAsync() {
         java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
 //                .header(     "Accept", "application/csv")
@@ -37,3 +42,4 @@ public class HttpGet {
         System.out.println("HttpResponseService getAsync: "+ result);
     }
 }
+
